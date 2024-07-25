@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire BNR</title>
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js"></script>
+</head>
+<body>
+    <form action="formulaire.php" method="POST">
+        <div class="Client">
+            <h3>INFORMATIONS SUR LE CLIENT</h3>
+            <label for="nom">Nom</label>
+            <input type="text"  name="nom" placeholder="Entrez votre nom" id="nom"  required >
+            
+            <label for="adresse">Adresse</label>
+            <input type="text" name="adresse" placeholder="Entrez votre adresse" id="adresse" required >
+
+            <label for="date">Date du Jour:</label>
+            <input type="date" name="date" id="date" required >
+        
+        </div>
+        <div id="Produits">
+            <div class="Produit">
+                <h3>INFORMATIONS SUR LES PRODUITS </h3>
+
+                <label for="produit">Nom du Produit</label>
+                <select name="produit[]" id="produit" onchange="afficherPrix()">
+                    <option value="Tomate">Tomate</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Banane">Banane</option>
+                </select>
+
+                <label for="prix" id="prix" >Prix:</label>
+                <label for="quantite">Quantite</label>
+                <input type="number"  name="quantite[]" placeholder="Quantite" id="quantite" required>
+
+                <button type="button"  onclick="ajouterProduit()">AJOUTER UN PRODUIT</button>
+            </div>
+    
+        </div>
+        <div class="Compte">
+            <h3>INFORMATIONS SUR LE COMPTE</h3>
+            <label for="numcompte">Numero de compte</label>
+            <input type="number" placeholder="Numero Compte" id="numcompte" name="numcompte" required>
+
+            <label for="nomcompte">Nom du Compte</label>
+            <input type="text" placeholder="Nom Compte" id="nomcompte" name="nomcompte" required>
+
+            <label for="banque">Nom de la Banque</label>
+            <input type="text" placeholder="Nom Banque" id="nombanque" name="nombanque" required> 
+        </div>
+        <button type="submit" name="valider">VALIDER</button>
+    </form>
+</body>
+</html>

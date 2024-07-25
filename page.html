@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="header">
+            <div class="top">
+                <div class="right"><p>INVOICE</p></div>
+                <div class="left"> 
+                    <span>Invoice to : {nomclient}</span>
+                    <span>Adresse: {adresse}</span>
+                </div>
+            </div> 
+
+            <div class="bottom">
+                <div class="left">
+                    <p><span>Invoice# </span> 12345</p>
+                    <p><span>Date </span>{date}</p>
+                </div>
+
+                <div class="right">
+                    <img src="C:/xampp/htdocs/bnr//<?php echo htmlspecialchars($_GET['image']);?>" alt="logo">
+                    <div>{Brand Name} <p class="description">{slogan}</p></div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="table">
+            <table class="itemproduit">
+                <thead>
+                    <tr>
+                        <th class="id">Sl</th>
+                        <th>Item Description</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tableauproduit}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bilan">
+            <div class="details">
+                
+                <div class="parag1">
+                    <h4>Thank you for your business</h4>
+                </div>
+                
+                <div class="parag2">
+                    <h4>Terms & Conditions</h4>
+                    <p>{terms}</p>
+                </div>
+                
+                <div class="parag3">
+                    <h4>Payment info</h4>
+                    <div class="payment">
+                        <p>Numero de Compte: {numcompte} </p>
+                        <p>Nom du Compte: {nomcompte} </p>
+                        <p>Nom de la banque : {nombanque} </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="TotalCalcul">
+                
+                <div class="parag1">
+                    <h4>Total <span id="total">{total}</span></h4>
+                    <h4>Tax <span id="tax">{tax}</span></h4>
+                </div>
+                
+                <div class="parag2">
+                    <h4>Total <span>${totaltax}</span></h4>
+                </div>
+                
+                <div class="parag3">
+                    <div class="signature">
+
+                    </div>
+                    <h4>Authorised Sign</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="phone">Phone: {phone}</div>
+            <div class="address">Address: {adress}</div>
+            <div class="web">Web site :{site}</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire BNR</title>
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js"></script>
+</head>
+<body>
+    <form action="formEntreprise.php" method="POST" enctype="mutlipart/form-data">
+        <h3>INFORMATIONS SUR L'ENTREPRISE</h3>
+        <label for="noment">Nom de l'entreprise: </label>
+        <input type="text" name="noment" placeholder="Nom de l'entreprise" required>
+
+        <label for="tel">Numero de Telephone: </label>
+        <input type="number" name="num" placeholder="Numero de Telephone de l'entreprise" required>
+
+        <label for="adress">Adresse: </label>
+        <input type="text" name="adress" placeholder="Adresse de l'entreprise" required>
+
+        <label for="site">Site Web: </label>
+        <input type="text" name="site" placeholder="Site Web de l'entreprise" required>
+
+        <label for="devise" id="devise" >Devise/Slogan : </label>
+        <input type="text" name="devise" placeholder="Devise/Slogan" required>
+
+        <label for="logo" id="logo">Selectionner un Logo:</label>
+        <input type ="file" name="image" id="image" accept="image/*" required>
+
+        <label for="Terms" id="Terms">Termes et Conditions : </label>
+        <textarea id="Terms" name="terms" rows="6" cols="30" required></textarea>
+    
+        <button type="submit" name="valider">VALIDER</button>
+    </form>
+</body>
+</html>
